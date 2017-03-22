@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pwd_verification">
+  <pwd_verification action="DELETE">
+    <description/>
+    <name>PR_IT_Mock_Verification</name>
+    <order>100</order>
+    <sys_class_name>pwd_verification</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2013-05-16 18:29:26</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_id>877eeb32eb11010045e1a5115206fe5b</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_name>PR_IT_Mock_Verification</sys_name>
+    <sys_package display_value="Global" source="global">global</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>pwd_verification_877eeb32eb11010045e1a5115206fe5b</sys_update_name>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2013-05-16 18:55:43</sys_updated_on>
+    <type display_value="Mock Verification Type">538d0fabbf200100710071a7bf07396c</type>
+  </pwd_verification>
+  <sys_translated_text action="delete_multiple" query="documentkey=877eeb32eb11010045e1a5115206fe5b"/>
+</record_update>

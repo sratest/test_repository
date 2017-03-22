@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_sra_cat_item">
+  <sc_sra_cat_item action="INSERT_OR_UPDATE">
+    <active>true</active>
+    <availability>on_desktop</availability>
+    <billable>false</billable>
+    <category display_value="Software">2809952237b1300054b6a3549dbe5dd4</category>
+    <checkpoint display_value="1">8f6d3a0f0b21320088926c9037673ad2</checkpoint>
+    <cost>0</cost>
+    <custom_cart/>
+    <delivery_plan/>
+    <delivery_plan_script/>
+    <delivery_time>1970-01-03 00:00:00</delivery_time>
+    <description><![CDATA[3 Tier blueprint for the Donuts Now app]]></description>
+    <entitlement_script/>
+    <group/>
+    <icon/>
+    <ignore_price>false</ignore_price>
+    <image/>
+    <list_price>0</list_price>
+    <location/>
+    <meta/>
+    <mobile_hide_price>false</mobile_hide_price>
+    <mobile_picture/>
+    <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+    <model/>
+    <name>3 Tier</name>
+    <no_cart>false</no_cart>
+    <no_order>false</no_order>
+    <no_order_now>false</no_order_now>
+    <no_proceed_checkout>false</no_proceed_checkout>
+    <no_quantity>false</no_quantity>
+    <no_search>false</no_search>
+    <omit_price>false</omit_price>
+    <order>0</order>
+    <ordered_item_link/>
+    <picture/>
+    <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=ec7d3e0f0b21320088926c9037673a4c&amp;sysparm_preview=true", "summary");</preview>
+    <price>0</price>
+    <recurring_frequency/>
+    <recurring_price>0</recurring_price>
+    <roles/>
+    <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+    <sc_ic_item_staging/>
+    <sc_ic_version/>
+    <short_description>3 Tier</short_description>
+    <show_variable_help_on_load>false</show_variable_help_on_load>
+    <skip_approval>true</skip_approval>
+    <sra_template>{"catalog":"e0d08b13c3330100c8b837659bba8fb4","category":"2809952237b1300054b6a3549dbe5dd4","checkpointId":"8f6d3a0f0b21320088926c9037673ad2","containerId":"2c6df20f0b21320088926c9037673a3c","description":"3 Tier blueprint for the Donuts Now app","elements":[{"ciType":"cmdb_ci_nginx_web_server","compatibleCiTypes":["cmdb_ci_outofband_device","cmdb_ci_printer","cmdb_ci_personal_printer","cmdb_ci_mfp_printer","cmdb_ci_pdu","cmdb_ci_msd","cmdb_ci_computer","cmdb_ci_ucs_blade","cmdb_ci_pc_hardware","cmdb_ci_server","cmdb_ci_server_hardware","cmdb_ci_tape_server","cmdb_ci_chassis_server","cmdb_ci_net_app_server","cmdb_ci_datapower_server","cmdb_ci_cim_server","cmdb_ci_lb","cmdb_ci_lb_bigip","cmdb_ci_lb_netscaler","cmdb_ci_lb_cisco_css","cmdb_ci_lb_a10","cmdb_ci_lb_f5_ltm","cmdb_ci_lb_cisco_csm","cmdb_ci_lb_cisco_gss","cmdb_ci_lb_isa","cmdb_ci_lb_radware","cmdb_ci_lb_network","cmdb_ci_lb_f5_gtm","cmdb_ci_lb_alteon","cmdb_ci_lb_ace","cmdb_ci_mainframe_lpar","cmdb_ci_unix_server","cmdb_ci_aix_server","cmdb_ci_hpux_server","cmdb_ci_solaris_server","cmdb_ci_mainframe","cmdb_ci_win_server","cmdb_ci_linux_server","cmdb_ci_virtualization_server","cmdb_ci_hyper_v_server","cmdb_ci_vcenter_server_obj","cmdb_ci_esx_server","cmdb_ci_netware_server","cmdb_ci_isam_server","cmdb_ci_osx_server","cmdb_ci_storage_server","cmdb_ci_storage_switch","cmdb_ci_mainframe_hardware","cmdb_ci_ucs_equipment","cmdb_ci_ups","cmdb_ci_ucs_chassis","cmdb_ci_netgear","cmdb_ci_ip_router","cmdb_ci_firewall_network","cmdb_ci_hub_network","cmdb_ci_fddi_network","cmdb_ci_wan_accel_network","cmdb_ci_ip_switch","cmdb_ci_wap_network","cmdb_ci_csu_dsu_network","cmdb_ci_modem_network","cmdb_ci_ip_firewall","cmdb_ci_ids_network"],"displayPath":"Load Balancer","endpoints":[{"ciType":"cmdb_ci_endpoint","displayPath":"Load Balancer &gt; Endpoint","endpoints":[],"isEndpoint":true,"isTopLevelElement":false,"name":"Endpoint","nodes":[],"properties":[],"readOnlyVariables":false,"sysId":"fd6db60f0b21320088926c9037673a55"}],"isEndpoint":false,"isTopLevelElement":true,"name":"Load Balancer","nodes":[{"ciType":"cmdb_ci_deployable","displayPath":"Load Balancer &gt; Upstream connection","endpoints":[],"isEndpoint":false,"isTopLevelElement":false,"name":"Upstream connection","nodes":[],"properties":[{"choices":[],"displayName":"Protocol","isParameter":false,"isReference":false,"mandatory":false,"maxLength":"32","name":"protocol","parentId":"4e6db60f0b21320088926c9037673a9b","propertyType":"","referenceOptions":{},"type":"string","value":"http"},{"choices":[],"displayName":"Port","isParameter":false,"isReference":true,"mandatory":false,"maxLength":"32","name":"port","parentId":"4e6db60f0b21320088926c9037673a9b","propertyType":"","reference":"Element","referenceOptions":{},"type":"string","value":"App Server &gt; port"},{"choices":[],"displayName":"Host","isParameter":false,"isReference":true,"mandatory":false,"maxLength":"128","name":"host","parentId":"4e6db60f0b21320088926c9037673a9b","propertyType":"resource_reference","reference":"Resource","referenceOptions":{},"type":"string","value":"${/@element::a56d760f0b21320088926c9037673a73/host}"}],"readOnlyVariables":false,"sysId":"4e6db60f0b21320088926c9037673a9b"}],"properties":[{"choices":[],"displayName":"site_name","isParameter":false,"isReference":false,"mandatory":false,"maxLength":"64","name":"site_name","parentId":"7d6db60f0b21320088926c9037673a3b","propertyType":"","referenceOptions":{},"type":"string","value":"donuts_now_site"},{"choices":[],"displayName":"Installation directory","isParameter":false,"isReference":false,"mandatory":false,"name":"install_directory","parentId":"7d6db60f0b21320088926c9037673a3b","propertyType":"","referenceOptions":{},"type":"string","value":"/etc/nginx/"},{"choices":[],"displayName":"Executable path","isParameter":false,"isReference":false,"mandatory":false,"maxLength":"128","name":"executable_path","parentId":"7d6db60f0b21320088926c9037673a3b","propertyType":"","referenceOptions":{},"type":"string","value":"/usr/sbin/nginx"},{"choices":[],"displayName":"Server block parameter","isParameter":false,"isReference":false,"mandatory":false,"maxLength":"64","name":"server_block_param","parentId":"7d6db60f0b21320088926c9037673a3b","propertyType":"","referenceOptions":{},"type":"string","value":"{server-block}"}],"readOnlyVariables":false,"resourceGroups":[],"resources":[{"id":"736a6057d7d03200a68480f29e610336","name":"donuts-now-loadbalancer","properties":[{"displayName":"Installation directory","isFinal":true,"name":"install_directory","type":"string","value":""}],"type":"EXISTING_RESOURCE"}],"sysId":"7d6db60f0b21320088926c9037673a3b"},{"ciType":"cmdb_ci_app_server_tomcat","compatibleCiTypes":["cmdb_ci_outofband_device","cmdb_ci_printer","cmdb_ci_personal_printer","cmdb_ci_mfp_printer","cmdb_ci_pdu","cmdb_ci_msd","cmdb_ci_computer","cmdb_ci_ucs_blade","cmdb_ci_pc_hardware","cmdb_ci_server","cmdb_ci_server_hardware","cmdb_ci_tape_server","cmdb_ci_chassis_server","cmdb_ci_net_app_server","cmdb_ci_datapower_server","cmdb_ci_cim_server","cmdb_ci_lb","cmdb_ci_lb_bigip","cmdb_ci_lb_netscaler","cmdb_ci_lb_cisco_css","cmdb_ci_lb_a10","cmdb_ci_lb_f5_ltm","cmdb_ci_lb_cisco_csm","cmdb_ci_lb_cisco_gss","cmdb_ci_lb_isa","cmdb_ci_lb_radware","cmdb_ci_lb_network","cmdb_ci_lb_f5_gtm","cmdb_ci_lb_alteon","cmdb_ci_lb_ace","cmdb_ci_mainframe_lpar","cmdb_ci_unix_server","cmdb_ci_aix_server","cmdb_ci_hpux_server","cmdb_ci_solaris_server","cmdb_ci_mainframe","cmdb_ci_win_server","cmdb_ci_linux_server","cmdb_ci_virtualization_server","cmdb_ci_hyper_v_server","cmdb_ci_vcenter_server_obj","cmdb_ci_esx_server","cmdb_ci_netware_server","cmdb_ci_isam_server","cmdb_ci_osx_server","cmdb_ci_storage_server","cmdb_ci_storage_switch","cmdb_ci_mainframe_hardware","cmdb_ci_ucs_equipment","cmdb_ci_ups","cmdb_ci_ucs_chassis","cmdb_ci_netgear","cmdb_ci_ip_router","cmdb_ci_firewall_network","cmdb_ci_hub_network","cmdb_ci_fddi_network","cmdb_ci_wan_accel_network","cmdb_ci_ip_switch","cmdb_ci_wap_network","cmdb_ci_csu_dsu_network","cmdb_ci_modem_network","cmdb_ci_ip_firewall","cmdb_ci_ids_network"],"displayPath":"App Server","endpoints":[{"ciType":"cmdb_ci_endpoint","displayPath":"App Server &gt; Endpoint","endpoints":[],"isEndpoint":true,"isTopLevelElement":false,"name":"Endpoint","nodes":[],"properties":[],"readOnlyVariables":false,"sysId":"296d760f0b21320088926c9037673a89"}],"isEndpoint":false,"isTopLevelElement":true,"name":"App Server","nodes":[{"ciType":"cmdb_ci_deployable","displayPath":"App Server &gt; Images","endpoints":[],"isEndpoint":false,"isTopLevelElement":false,"name":"Images","nodes":[],"properties":[],"readOnlyVariables":false,"sysId":"7d6db60f0b21320088926c9037673a10"},{"ciType":"cmdb_ci_app_server_tomcat_war","displayPath":"App Server &gt; Web App","endpoints":[],"isEndpoint":false,"isTopLevelElement":false,"name":"Web App","nodes":[],"properties":[],"readOnlyVariables":false,"sysId":"ed6d760f0b21320088926c9037673acc"}],"properties":[{"choices":[],"displayName":"Fail if not running","isParameter":false,"isReference":false,"mandatory":false,"name":"fail_if_not_running","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"boolean","value":"false"},{"choices":[],"displayName":"Tomcat Manager","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"256","name":"tomcat_script_manager","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"tomcat_manager"},{"choices":[],"displayName":"Protocol","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"40","name":"protocol","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"http"},{"choices":[],"displayName":"Manager App","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"256","name":"manager_app","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"manager"},{"choices":[],"displayName":"Installation directory","isParameter":false,"isReference":false,"mandatory":true,"name":"install_directory","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"/home/ec2-user/apache-tomcat-8.0.41"},{"choices":[],"displayName":"Port","isParameter":false,"isReference":false,"mandatory":true,"name":"port","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"8081"},{"choices":[],"displayName":"Fail if deployed","isParameter":false,"isReference":false,"mandatory":false,"name":"fail_if_deployed","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"boolean","value":"false"},{"choices":[],"displayName":"Service Name","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"256","name":"service_name","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"/etc/init.d/tomcat"},{"choices":[],"displayName":"Fail if running","isParameter":false,"isReference":false,"mandatory":false,"name":"fail_if_running","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"boolean","value":"false"},{"choices":[],"displayName":"User","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"256","name":"user","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"string","value":"ec2-user"},{"choices":[],"displayName":"Tomcat Manager Password","isParameter":false,"isReference":false,"mandatory":true,"name":"tomcat_manager_password","parentId":"a56d760f0b21320088926c9037673a73","propertyType":"","referenceOptions":{},"type":"password2","value":"6d6d760f0b21320088926c9037673aaa"}],"readOnlyVariables":false,"resourceGroups":[],"resources":[{"id":"93a2e493d7d03200a68480f29e61032c","name":"donuts-now-app","properties":[{"displayName":"Installation directory","isFinal":true,"name":"install_directory","type":"string","value":""},{"displayName":"Port","isFinal":true,"name":"port","type":"string","value":"8080"}],"type":"EXISTING_RESOURCE"}],"sysId":"a56d760f0b21320088926c9037673a73"},{"ciType":"cmdb_ci_db_mysql_instance","compatibleCiTypes":["cmdb_ci_outofband_device","cmdb_ci_printer","cmdb_ci_personal_printer","cmdb_ci_mfp_printer","cmdb_ci_pdu","cmdb_ci_msd","cmdb_ci_computer","cmdb_ci_ucs_blade","cmdb_ci_pc_hardware","cmdb_ci_server","cmdb_ci_server_hardware","cmdb_ci_tape_server","cmdb_ci_chassis_server","cmdb_ci_net_app_server","cmdb_ci_datapower_server","cmdb_ci_cim_server","cmdb_ci_lb","cmdb_ci_lb_bigip","cmdb_ci_lb_netscaler","cmdb_ci_lb_cisco_css","cmdb_ci_lb_a10","cmdb_ci_lb_f5_ltm","cmdb_ci_lb_cisco_csm","cmdb_ci_lb_cisco_gss","cmdb_ci_lb_isa","cmdb_ci_lb_radware","cmdb_ci_lb_network","cmdb_ci_lb_f5_gtm","cmdb_ci_lb_alteon","cmdb_ci_lb_ace","cmdb_ci_mainframe_lpar","cmdb_ci_unix_server","cmdb_ci_aix_server","cmdb_ci_hpux_server","cmdb_ci_solaris_server","cmdb_ci_mainframe","cmdb_ci_win_server","cmdb_ci_linux_server","cmdb_ci_virtualization_server","cmdb_ci_hyper_v_server","cmdb_ci_vcenter_server_obj","cmdb_ci_esx_server","cmdb_ci_netware_server","cmdb_ci_isam_server","cmdb_ci_osx_server","cmdb_ci_storage_server","cmdb_ci_storage_switch","cmdb_ci_mainframe_hardware","cmdb_ci_ucs_equipment","cmdb_ci_ups","cmdb_ci_ucs_chassis","cmdb_ci_netgear","cmdb_ci_ip_router","cmdb_ci_firewall_network","cmdb_ci_hub_network","cmdb_ci_fddi_network","cmdb_ci_wan_accel_network","cmdb_ci_ip_switch","cmdb_ci_wap_network","cmdb_ci_csu_dsu_network","cmdb_ci_modem_network","cmdb_ci_ip_firewall","cmdb_ci_ids_network"],"displayPath":"Database","endpoints":[{"ciType":"cmdb_ci_endpoint","displayPath":"Database &gt; Endpoint","endpoints":[],"isEndpoint":true,"isTopLevelElement":false,"name":"Endpoint","nodes":[],"properties":[],"readOnlyVariables":false,"sysId":"156d760f0b21320088926c9037673a1d"}],"isEndpoint":false,"isTopLevelElement":true,"name":"Database","nodes":[{"ciType":"cmdb_ci_config_file","displayPath":"Database &gt; SQL Script","endpoints":[],"isEndpoint":false,"isTopLevelElement":false,"name":"SQL Script","nodes":[],"properties":[{"choices":[],"displayName":"DB Name","isParameter":false,"isReference":false,"mandatory":false,"maxLength":"256","name":"db_name","parentId":"d96d760f0b21320088926c9037673a48","propertyType":"","referenceOptions":{},"type":"string","value":""},{"choices":[],"displayName":"DB User","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"128","name":"db_user","parentId":"d96d760f0b21320088926c9037673a48","propertyType":"","referenceOptions":{},"type":"string","value":"root"},{"choices":[],"displayName":"DB Password","isParameter":false,"isReference":false,"mandatory":true,"name":"db_password","parentId":"d96d760f0b21320088926c9037673a48","propertyType":"","referenceOptions":{},"type":"password2","value":"296d760f0b21320088926c9037673a6b"}],"readOnlyVariables":false,"sysId":"d96d760f0b21320088926c9037673a48"}],"properties":[{"choices":[],"displayName":"Port","isParameter":false,"isReference":false,"mandatory":false,"name":"port","parentId":"dd6d760f0b21320088926c9037673a09","propertyType":"","referenceOptions":{},"type":"string","value":""},{"choices":[],"displayName":"Host","isParameter":false,"isReference":false,"mandatory":true,"name":"host","parentId":"dd6d760f0b21320088926c9037673a09","propertyType":"","referenceOptions":{},"type":"string","value":"localhost"},{"choices":[],"displayName":"Executable","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"1024","name":"executable","parentId":"dd6d760f0b21320088926c9037673a09","propertyType":"","referenceOptions":{},"type":"string","value":"/usr/bin/mysql"},{"choices":[],"displayName":"Host Name","isParameter":false,"isReference":false,"mandatory":true,"maxLength":"128","name":"host_name","parentId":"dd6d760f0b21320088926c9037673a09","propertyType":"","referenceOptions":{},"type":"string","value":""}],"readOnlyVariables":false,"resourceGroups":[],"resources":[{"id":"5e31d45fd7903200a68480f29e61035e","name":"donuts-now-db","properties":[{"displayName":"Host","isFinal":true,"name":"host","type":"string","value":""},{"displayName":"Port","isFinal":true,"name":"port","type":"string","value":"3306"}],"type":"EXISTING_RESOURCE"}],"sysId":"dd6d760f0b21320088926c9037673a09"}],"isEnvironment":false,"layerId":"456d360f0b21320088926c9037673ab0","name":"3 Tier","params":[]}</sra_template>
+    <start_closed>false</start_closed>
+    <sys_class_name>sc_sra_cat_item</sys_class_name>
+    <sys_created_by/>
+    <sys_created_on/>
+    <sys_id>ec7d3e0f0b21320088926c9037673a4c</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_name>3 Tier</sys_name>
+    <sys_package display_value="Global" source="global">global</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>sc_sra_cat_item_ec7d3e0f0b21320088926c9037673a4c</sys_update_name>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:06:23</sys_updated_on>
+    <template/>
+    <type>item</type>
+    <use_sc_layout>true</use_sc_layout>
+    <vendor/>
+    <visible_bundle>true</visible_bundle>
+    <visible_guide>true</visible_guide>
+    <visible_standalone>true</visible_standalone>
+    <workflow display_value="SRA Deployment Request">2462a3765bc0120039618379c0f91aaf</workflow>
+  </sc_sra_cat_item>
+  <sys_translated_text action="delete_multiple" query="documentkey=ec7d3e0f0b21320088926c9037673a4c"/>
+  <fx_price action="delete_multiple" query="id=ec7d3e0f0b21320088926c9037673a4c"/>
+  <fx_price action="INSERT_OR_UPDATE">
+    <amount>0</amount>
+    <currency display_value="USD">USD</currency>
+    <field>price</field>
+    <id>ec7d3e0f0b21320088926c9037673a4c</id>
+    <parent/>
+    <reference_amount>0</reference_amount>
+    <reference_currency display_value="USD">USD</reference_currency>
+    <sys_created_by>system</sys_created_by>
+    <sys_created_on>2017-03-21 17:06:21</sys_created_on>
+    <sys_id>607d3e0f0b21320088926c9037673a4e</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:06:21</sys_updated_on>
+    <table>sc_sra_cat_item</table>
+    <type>calculated</type>
+  </fx_price>
+  <fx_price action="INSERT_OR_UPDATE">
+    <amount>0</amount>
+    <currency display_value="USD">USD</currency>
+    <field>recurring_price</field>
+    <id>ec7d3e0f0b21320088926c9037673a4c</id>
+    <parent/>
+    <reference_amount>0</reference_amount>
+    <reference_currency display_value="USD">USD</reference_currency>
+    <sys_created_by>system</sys_created_by>
+    <sys_created_on>2017-03-21 17:06:21</sys_created_on>
+    <sys_id>a47d3e0f0b21320088926c9037673a4f</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:06:21</sys_updated_on>
+    <table>sc_sra_cat_item</table>
+    <type>calculated</type>
+  </fx_price>
+</record_update>

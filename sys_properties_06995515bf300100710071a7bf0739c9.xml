@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+  <sys_properties action="INSERT_OR_UPDATE">
+    <choices/>
+    <description>Disable captcha validation functionality (Use only for automation testing)</description>
+    <ignore_cache>true</ignore_cache>
+    <is_private>false</is_private>
+    <name>password_reset.captcha.ignore</name>
+    <read_roles/>
+    <suffix/>
+    <sys_class_name>sys_properties</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2013-04-16 19:17:29</sys_created_on>
+    <sys_id>06995515bf300100710071a7bf0739c9</sys_id>
+    <sys_mod_count>12</sys_mod_count>
+    <sys_name>password_reset.captcha.ignore</sys_name>
+    <sys_package display_value="Password Reset" source="com.glideapp.password_reset">88075e3234a132002d237aadf9720ca6</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>sys_properties_06995515bf300100710071a7bf0739c9</sys_update_name>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2017-03-21 18:01:41</sys_updated_on>
+    <type>boolean</type>
+    <value>true</value>
+    <write_roles/>
+  </sys_properties>
+  <sys_translated_text action="delete_multiple" query="documentkey=06995515bf300100710071a7bf0739c9"/>
+</record_update>

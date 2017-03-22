@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_installation_exit">
+  <sys_installation_exit action="INSERT_OR_UPDATE">
+    <active>false</active>
+    <description>SAML 2.0 Single Sign-on Login Script</description>
+    <name>SAML2SingleSignon</name>
+    <overrides>ExternalAuthentication</overrides>
+    <script><![CDATA[gs.include("PrototypeServer");
+
+var SAML2SingleSignon = Class.create();
+SAML2SingleSignon.prototype = {
+
+  initialize: function() {
+    this.serviceURL = gs.getProperty("glide.authenticate.sso.saml2.service_url");
+    this.userField = gs.getProperty("glide.authenticate.sso.saml2.user_field");
+    this.authnrequestURL = gs.getProperty("glide.authenticate.sso.saml2.idp_authnrequest_url");
+
+    this.SAML2 = new SAML2();
+  },
+
+  process : function() {
+    var saml_passed = true;
+
+    var samlResponse = request.getParameter("SAMLResponse");
+    var relayState = request.getParameter("RelayState");
+    if ((samlResponse == null || samlResponse == "") && (relayState == null || relayState == "")) {
+      // did not authenticate yet, send AuthnRequest which will redirect back to us
+      relayState = this.generateRelayState();
+
+      var redirURL = this.authnrequestURL + "?SAMLRequest=" + this.getAuthnRequestString() + "&RelayState=" + relayState;
+      this.logDebug("Redirecting to: " + redirURL);
+      return redirURL;
+    }
+
+    samlResponse = GlideStringUtil.base64Decode(samlResponse);
+    //this.logDebug(samlResponse);
+
+    if (this.SAML2.validateSignature(samlResponse) == false) {
+      this.logError("Could not validate SAMLResponse signature");
+      return "failed_authentication";
+    }
+
+    var xmlDoc = new XMLDocument(samlResponse, false);
+    if (xmlDoc == null) {
+      this.logError("Could not parse SAMLResponse");
+      return "failed_missing_requirement";
+    }
+
+    if (this.SAML2.validateCertificate(xmlDoc) == false) {
+      this.logError("Could not validate SAMLResponse certificate");
+      return "failed_authentication";
+    }
+
+    var nameId = this.SAML2.getNameID();
+    if (nameId == null) {
+      this.logError("Could not extract NameID from SAMLResponse");
+      return "failed_missing_requirement";
+    }
+
+    this.logDebug("SAML2 NameID: " + nameId);
+
+    var sessionIndex = this.SAML2.getSessionIndex();
+    if (sessionIndex == null) {
+      this.logError("Could not extract SessionIndex from SAMLResponse");
+      return "failed_missing_requirement";
+    }
+
+    this.logDebug("SAML2 SessionIndex: " + sessionIndex);
+
+    // pass these values to Logout script
+    request.getSession().setAttribute("glide.saml2.session_index", sessionIndex);
+    request.getSession().setAttribute("glide.saml2.session_id", nameId);
+
+    return this.loginUser(nameId);
+  },
+
+  generateRelayState : function() {
+    //Set up base url
+    var urlTokens = /^(http(s?)\:\/\/.*)\/\S+$/(this.serviceURL);
+    var baseURL = this.serviceURL;
+    if(urlTokens && urlTokens.length > 1) baseURL = urlTokens[1];
+    this.logDebug("Stripping down the serviceURL: "+this.serviceURL+" to a base URL of: "+baseURL);
+      
+    //grab the request URI and query string from the request 
+    var requestURI = request.getRequestURI();
+    this.logDebug("requestURI: " + requestURI);
+    var qs = request.getQueryString();
+    this.logDebug("Query String (qs): " + qs);
+    var uriparam = request.getParameter("uri");
+    this.logDebug("URI Parameter: " + uriparam);
+    
+    if(!uriparam){
+      //No deep linking
+      this.logDebug("No Deep Linking for this SAML request");
+      relayState = this.serviceURL;
+    } else {
+      //Deep Linking
+      this.logDebug("There may be Deep Linking involved with this SAML request");
+      var destinationURI = "";
+      if(uriparam){
+        destinationURI += "?uri=" + encodeURIComponent(uriparam);
+      }
+      relayState = baseURL + "/nav_to.do" + destinationURI;
+    }
+    this.logDebug("Generating a Relay State of: " + relayState);
+    return relayState;
+  },
+
+  loginUser : function (nameId) {
+    var JavaString = Packages.java.lang.String;
+    if (GlideStringUtil.nil(new JavaString(nameId).trim())) {
+      return "failed_missing_requirement";
+    }
+
+    var ugr = new GlideRecord("sys_user");
+    ugr.addQuery(this.userField, nameId);
+    ugr.query();
+    if (!ugr.next()) {
+        var errorMessage = gs.getMessage("User: ") + nameId + gs.getMessage(" not found");
+        this.logDebug(errorMessage);
+        gs.addErrorMessage(errorMessage);
+        return "failed_authentication";
+    }
+
+    var userName = ugr.getValue("user_name");
+    
+    var relayState = request.getParameter("RelayState");
+    if(relayState){
+      this.logDebug("We will be redirecting user to the RelayState: " + relayState);
+      action.setRedirect(relayState);
+    } 
+    return userName;
+  },
+
+  getAuthnRequestString : function () {
+    var elem = this.SAML2.createAuthnRequest();
+        
+    this.SAML2.createIssuer(elem);
+    this.SAML2.createNameIDPolicy(elem);
+    var rElem = this.SAML2.createRequestedAuthnContext(elem);
+    this.SAML2.createAuthnContextClassRef(rElem);
+
+    return this.SAML2.getEncodedSAMLRequest(elem);
+  },
+
+  logDebug : function (msg) {
+    this.SAML2.logDebug(msg);
+  },
+
+  logError : function (msg) {
+    var lMsg = gs.getMessage(msg);
+    gs.log(lMsg);
+    gs.addErrorMessage(lMsg);
+  }
+  
+};]]></script>
+    <sys_class_name>sys_installation_exit</sys_class_name>
+    <sys_created_by>dloo</sys_created_by>
+    <sys_created_on>2010-04-07 23:51:45</sys_created_on>
+    <sys_id>daafc9ab0a0a0bcb2ff9916f0c22a19d</sys_id>
+    <sys_mod_count>188</sys_mod_count>
+    <sys_name>SAML2SingleSignon</sys_name>
+    <sys_package display_value="SAML 2.0 Single Sign-On(do not activate...use 'Integration - Multiple Provider Single Sign-On Instal" source="com.snc.integration.sso.saml20">563ffa4f0b21320088926c9037673a52</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>sys_installation_exit_daafc9ab0a0a0bcb2ff9916f0c22a19d</sys_update_name>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:14:34</sys_updated_on>
+  </sys_installation_exit>
+</record_update>

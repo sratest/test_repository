@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="io_set_item">
+  <io_set_item action="INSERT_OR_UPDATE">
+    <order>8000</order>
+    <sc_cat_item display_value="3 Tier">dbacf60b0b21320088926c9037673a7e</sc_cat_item>
+    <sys_class_name>io_set_item</sys_class_name>
+    <sys_created_by>system</sys_created_by>
+    <sys_created_on>2017-03-21 17:03:01</sys_created_on>
+    <sys_id>73ac3a0b0b21320088926c9037673a17</sys_id>
+    <sys_mod_count>1</sys_mod_count>
+    <sys_name>SRA common variables.3 Tier</sys_name>
+    <sys_package display_value="Global" source="global">global</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>io_set_item_73ac3a0b0b21320088926c9037673a17</sys_update_name>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:03:01</sys_updated_on>
+    <variable_set display_value="SRA common variables">0b5e82a00b7b220031a567bff6673ac9</variable_set>
+  </io_set_item>
+</record_update>

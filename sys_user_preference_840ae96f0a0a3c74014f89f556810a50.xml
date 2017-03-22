@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_user_preference">
+  <sys_user_preference action="INSERT_OR_UPDATE">
+    <description>Forms with multiple sections or related lists have a tabbed UI</description>
+    <name>tabbed.forms</name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2010-05-10 21:07:07</sys_created_on>
+    <sys_id>840ae96f0a0a3c74014f89f556810a50</sys_id>
+    <sys_mod_count>4</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:14:50</sys_updated_on>
+    <system>true</system>
+    <type>boolean</type>
+    <user/>
+    <value>false</value>
+  </sys_user_preference>
+</record_update>

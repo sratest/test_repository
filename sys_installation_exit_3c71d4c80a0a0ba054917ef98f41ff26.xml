@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_installation_exit">
+  <sys_installation_exit action="INSERT_OR_UPDATE">
+    <active>false</active>
+    <description>SAML2 Logout</description>
+    <name>SAML2Logout</name>
+    <overrides>Logout</overrides>
+    <script><![CDATA[gs.include("PrototypeServer");
+
+var SAML2Logout = Class.create();
+SAML2Logout.prototype = {
+  initialize: function() {
+    this.SAML2 = new SAML2();
+  },
+
+  process : function() {
+    if (gs.getProperty("glide.authenticate.external") != "true")
+      return this.processNormalLogout();
+
+    var serviceURL = gs.getProperty("glide.authenticate.sso.saml2.service_url");
+    var samlRequest = escape(this.getLogoutRequest()); // escape the parameter since its used in a redirect
+    var idpLogoutURL = gs.getProperty("glide.authenticate.sso.saml2.idp_logout_url");
+    var req = idpLogoutURL + "?SAMLRequest=" + samlRequest + "&RelayState=" + serviceURL;
+
+    //gs.log(req);
+
+    response.sendRedirect("auth_redirect.do?sysparm_url=" + req);
+    return true;
+  },
+
+  processNormalLogout : function() {
+    var s = request.getParameter('sysparm_goto_url');
+    if (s && GlideSecurityUtils.isURLWhiteListed(s))
+      response.sendRedirect(s);
+    else
+      response.sendRedirect("logout_success.do");
+
+    return true;
+  },
+
+  getLogoutRequest : function () {
+    var sessionIndex = request.getSession().getAttribute("glide.saml2.session_index");
+    var nameId = request.getSession().getAttribute("glide.saml2.session_id");
+
+    var elem = this.SAML2.createLogoutRequest();
+
+    this.SAML2.createIssuer(elem);
+    this.SAML2.createNameID(elem, nameId);
+    gs.log("SAML2 SessionIndex: " + sessionIndex);
+    this.SAML2.createSessionIndex(elem, sessionIndex);
+
+    return this.SAML2.getEncodedSAMLRequest(elem);
+  }
+}
+]]></script>
+    <sys_class_name>sys_installation_exit</sys_class_name>
+    <sys_created_by>dloo</sys_created_by>
+    <sys_created_on>2010-04-26 23:26:52</sys_created_on>
+    <sys_id>3c71d4c80a0a0ba054917ef98f41ff26</sys_id>
+    <sys_mod_count>89</sys_mod_count>
+    <sys_name>SAML2Logout</sys_name>
+    <sys_package display_value="SAML 2.0 Single Sign-On(do not activate...use 'Integration - Multiple Provider Single Sign-On Instal" source="com.snc.integration.sso.saml20">563ffa4f0b21320088926c9037673a52</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>sys_installation_exit_3c71d4c80a0a0ba054917ef98f41ff26</sys_update_name>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:14:34</sys_updated_on>
+  </sys_installation_exit>
+</record_update>

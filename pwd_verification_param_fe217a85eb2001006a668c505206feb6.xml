@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pwd_verification_param">
+  <pwd_verification_param action="DELETE">
+    <description/>
+    <name>complexity</name>
+    <order/>
+    <sys_class_name>pwd_verification_param</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2013-04-03 20:44:00</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_id>fe217a85eb2001006a668c505206feb6</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_name>complexity</sys_name>
+    <sys_package display_value="Global" source="global">global</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>pwd_verification_param_fe217a85eb2001006a668c505206feb6</sys_update_name>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2013-04-03 20:44:00</sys_updated_on>
+    <value>4</value>
+    <verification display_value="PR_IT_1_SMS_Verification">e4217a85eb2001006a668c505206fead</verification>
+  </pwd_verification_param>
+  <sys_translated_text action="delete_multiple" query="documentkey=fe217a85eb2001006a668c505206feb6"/>
+</record_update>

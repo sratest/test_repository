@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="item_option_new_set">
+  <item_option_new_set action="INSERT_OR_UPDATE">
+    <description>Variable set for Database</description>
+    <display_title>true</display_title>
+    <layout>2across</layout>
+    <name>Database</name>
+    <order>10000</order>
+    <sys_class_name>item_option_new_set</sys_class_name>
+    <sys_created_by>system</sys_created_by>
+    <sys_created_on>2017-03-21 17:03:00</sys_created_on>
+    <sys_id>efacf60b0b21320088926c9037673ae9</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_name>Database</sys_name>
+    <sys_package display_value="Global" source="global">global</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>item_option_new_set_efacf60b0b21320088926c9037673ae9</sys_update_name>
+    <sys_updated_by>system</sys_updated_by>
+    <sys_updated_on>2017-03-21 17:03:00</sys_updated_on>
+    <title/>
+  </item_option_new_set>
+</record_update>

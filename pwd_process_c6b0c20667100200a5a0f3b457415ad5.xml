@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pwd_process">
+  <pwd_process action="INSERT_OR_UPDATE">
+    <active>true</active>
+    <apply_to_all_users>true</apply_to_all_users>
+    <auto_gen_password>true</auto_gen_password>
+    <change>true</change>
+    <cred_store display_value="Local ServiceNow Instance">6e51033fbf020100710071a7bf0739e0</cred_store>
+    <description>Default Self Service PWR uses the new password reset framework, but the flow/UI stays the same.</description>
+    <display_captcha>false</display_captcha>
+    <display_password>false</display_password>
+    <email_password_reset_url>false</email_password_reset_url>
+    <identification_type display_value="Username Identification">fc7bf2b3bf220100710071a7bf0739b4</identification_type>
+    <min_verifications>1</min_verifications>
+    <name>Default Self Service</name>
+    <password_needs_reset>true</password_needs_reset>
+    <post_processor/>
+    <public_access>true</public_access>
+    <public_url/>
+    <reset>true</reset>
+    <send_email>true</send_email>
+    <sys_class_name>pwd_process</sys_class_name>
+    <sys_created_by>cheng.liu</sys_created_by>
+    <sys_created_on>2015-05-29 18:17:29</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <sys_id>c6b0c20667100200a5a0f3b457415ad5</sys_id>
+    <sys_mod_count>16</sys_mod_count>
+    <sys_name>Default Self Service</sys_name>
+    <sys_package display_value="Self Service Password Reset" source="com.snc.password_reset">44075e3234a132002d237aadf9720ca6</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Global">global</sys_scope>
+    <sys_update_name>pwd_process_c6b0c20667100200a5a0f3b457415ad5</sys_update_name>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2017-03-21 18:02:47</sys_updated_on>
+    <unlock_account>false</unlock_account>
+    <url_suffix>ss_default</url_suffix>
+    <user_experience_entry/>
+    <user_experience_failure/>
+    <user_experience_success/>
+  </pwd_process>
+</record_update>
